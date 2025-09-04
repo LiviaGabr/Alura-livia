@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Felca - YouTuber</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: black;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        header {
+            background-color: #FF5733;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            color: #FF5733;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .content {
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #FF5733;
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid #C7442D;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 0;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #C7442D;
+            transform: scale(1.05);
+        }
+        .history-content {
+            display: none;
+            background-color: #e6e6e6;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .active {
+            display: block;
+        }
+        .question-container {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .feedback {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .correto { color: green; }
+        .errado { color: red; }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .image-container div {
+            margin: 0 20px;
+            text-align: center;
+        }
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .image-container .year {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .menu-acessibilidade {
+            position:fixed;
+            top:1.25rem;
+            right:20px;
+            z-index:1000;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            flex-direction:column;
+        }
+        #botao-acessibilidade {
+            background-color:#FF5733;
+            border:2px solid #C7442D;
+            border-radius:8px;
+            padding:8px 12px;
+            cursor:pointer;
+            transition:transform 0.3s ease, background-color 0.3s ease;
+        }
+        #botao-acessibilidade:hover {
+            background-color:#C7442D;
+            transform:scale(1.1) rotate(-5deg);
+        }
+        .rotacao-botao {
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+        }
+        .rotacao-botao.ativo {
+            transform: rotate(90deg);
+        }
+        .opcoes-acessibilidade {
+            display:flex;
+            flex-direction:column;
+            gap:6px;
+        }
+        .apresenta-lista {
+            display:none;
+        }
+        .opcoes-acessibilidade .btn {
+            background-color:#FF5733;
+            border:2px solid #C7442D;
+            border-radius:6px;
+            padding:6px 10px;
+            cursor:pointer;
+            transition:background-color 0.3s ease, transform 0.3s ease;
+        }
+        .opcoes-acessibilidade .btn:hover {
+            background-color:#C7442D;
+            transform:scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="acessibilidade" class="menu-acessibilidade">
+        <button id="botao-acessibilidade" type="button" aria-expanded="false">acessibilidade</button>
+        <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
+          <button id="aumentar-fonte" type="button" class="btn">A+</button>
+          <button id="diminuir-fonte" type="button" class="btn">A-</button>
+        </div>
+    </div>
+    <header>
+        <img src="https://www.famousbirthdays.com/headshots/felca-1.jpg" alt="Felca YouTube Thumbnail">
+        <h1>Felca - YouTuber de Sucesso</h1>
+    </header>
+    <section>
+        <div class="container">
+            <div class="content">
+                <h2>História de Felca</h2>
+                <button onclick="mostrarHistoria('inicios')">Inícios da Carreira</button>
+                <button onclick="mostrarHistoria('crescimento')">Crescimento no YouTube</button>
+                <button onclick="mostrarHistoria('atualidade')">Atualmente</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="inicios" class="history-content">
+                <h3>Inícios da Carreira</h3>
+                <p>Felca iniciou sua jornada no YouTube de forma simples e humilde. Inicialmente, ele se dedicava a produzir vídeos de <strong>jogabilidade</strong> e <strong>reações</strong>, focando principalmente no entretenimento e na interação com os poucos seguidores que tinha no começo.</p>
+                <p>Felca começou com vídeos mais modestos, sem grandes recursos de produção, mas com um grande diferencial: a <strong>autenticidade</strong> e o <strong>carinho com a comunidade</strong>. Ele sempre procurou ser genuíno em suas reações, o que fez com que a audiência se conectasse rapidamente com ele.</p>
+                <p>Nos primeiros meses, os vídeos de Felca não tinham um grande número de visualizações, mas sua persistência e paixão pelo que fazia foram fundamentais. Ele sempre se preocupou em melhorar a qualidade do conteúdo, respondendo aos comentários dos fãs e pedindo sugestões para melhorar.</p>
+                <p>Foi esse esforço constante e a interação com a audiência que fez seu canal começar a ganhar uma base de fãs fiel. As pessoas se sentiram atraídas não só pelo conteúdo, mas pelo <strong>jeito autêntico</strong> e <strong>divertido</strong> de Felca, o que ajudou a construir uma comunidade de seguidores que apoiavam seu trabalho.</p>
+                <p>Com o tempo, Felca passou a investir mais em seu conteúdo, buscando criar vídeos com mais qualidade e diversificando os tipos de conteúdo. Ele se destacou pela <strong>simplicidade</strong> e <strong>sinceridade</strong>, algo que atraiu um público diversificado que se sentia à vontade para interagir com ele e com outros membros da comunidade.</p>
+                <p>Esse foi o início da carreira de Felca, marcada pela dedicação, autenticidade e o foco em criar uma relação sólida com sua audiência.</p>
+                <div class="image-container">
+                    <div>
+                        <img src="https://yt3.googleusercontent.com/GXa1uouxk5bDKKqYZg2PFlqhYiQ3ma8iJles5d1qRpByM7_9JgTiWFVVb5CjW6z6MbhnH45N8g=s900-c-k-c0x00ffffff-no-rj" alt="Felca 2017">
+                        <div class="year">2017</div>
+                    </div>
+                    <div>
+                        <img src="https://veja.abril.com.br/wp-content/uploads/2025/08/image-11.jpg?quality=70&strip=info&w=414&h=280&crop=1" alt="Felca 2025">
+                        <div class="year">2025</div>
+                    </div>
+                </div>
+                <div class="question-container">
+                    <h3>O que caracterizou os primeiros vídeos de Felca?</h3>
+                    <label><input type="radio" name="pergunta1" value="errado"> Efeitos especiais avançados</label><br>
+                    <label><input type="radio" name="pergunta1" value="errado"> Vlogs de viagens</label><br>
+                    <label><input type="radio" name="pergunta1" value="certo"> Jogabilidade e reações</label><br>
+                    <label><input type="radio" name="pergunta1" value="errado"> Vídeos de culinária</label><br>
+                    <button onclick="verificarResposta('pergunta1','feedback1')">Verificar</button>
+                    <div id="feedback1" class="feedback"></div>
+                </div>
+            </div>
+
+            <div id="crescimento" class="history-content">
+                <h3>Crescimento no YouTube</h3>
+                <p>Felca experimentou um crescimento significativo no YouTube ao longo dos anos. Inicialmente, ele começou com vídeos simples de jogabilidade e reações, mas logo diversificou seu conteúdo para incluir vlogs, análises de jogos e outros tipos de vídeos interativos.</p>
+                <p>Com o tempo, seu canal começou a crescer de forma exponencial, ganhando uma base de fãs mais fiel. Além disso, ele investiu em melhorar a qualidade dos seus vídeos e expandir sua rede de colaboração com outros criadores de conteúdo, o que aumentou ainda mais sua visibilidade.</p>
+                <p>Felca também se destacou por seu engajamento com a comunidade, sempre respondendo aos comentários dos fãs e promovendo interações diretas. Isso ajudou a fortalecer a relação com seu público e solidificou sua posição no YouTube.</p>
+                <p>Ele também se envolveu com outros YouTubers, realizando colaborações que ampliaram ainda mais seu alcance. Hoje, ele é um dos principais criadores de conteúdo da sua área, com milhões de inscritos e visualizações.</p>
+                <div class="question-container">
+                    <h3>Como Felca aumentou sua visibilidade no YouTube?</h3>
+                    <label><input type="radio" name="pergunta2" value="errado"> Exclusivamente culinária</label><br>
+                    <label><input type="radio" name="pergunta2" value="certo"> Conteúdo de qualidade + colaborações</label><br>
+                    <label><input type="radio" name="pergunta2" value="errado"> Vídeos de viagens</label><br>
+                    <label><input type="radio" name="pergunta2" value="errado"> Parou de interagir com fãs</label><br>
+                    <button onclick="verificarResposta('pergunta2','feedback2')">Verificar</button>
+                    <div id="feedback2" class="feedback"></div>
+                </div>
+            </div>
+
+            <div id="atualidade" class="history-content">
+                <h3>Atualmente</h3>
+                <p>Atualmente, Felca continua sendo um dos YouTubers mais influentes de sua área. Seu canal se tornou uma referência, com milhões de inscritos e um público altamente engajado. Ele mantém uma conexão forte com sua audiência e continua inovando, sempre trazendo novos conteúdos interativos e criativos.</p>
+                <p>Além de sua carreira no YouTube, Felca expandiu sua presença para outras plataformas de mídia social, interagindo com fãs através de diferentes meios, como Twitter, Instagram e TikTok.</p>
+                <p>Ele também começou a investir em projetos fora do YouTube, incluindo colaborações com marcas e outros influenciadores, ampliando ainda mais sua influência na indústria de entretenimento digital.</p>
+                <p>Felca permanece dedicado à sua audiência e continua a surpreender seus fãs com novos projetos e ideias, mantendo-se fiel à sua essência enquanto se adapta às mudanças e tendências da plataforma.</p>
+                <div class="question-container">
+                    <h3>Qual foi a estratégia de Felca para se tornar um dos principais YouTubers?</h3>
+                    <label><input type="radio" name="pergunta3" value="errado"> Apenas jogabilidade</label><br>
+                    <label><input type="radio" name="pergunta3" value="certo"> Expandir plataformas + colaborações</label><br>
+                    <label><input type="radio" name="pergunta3" value="errado"> Parar de interagir</label><br>
+                    <label><input type="radio" name="pergunta3" value="errado"> Não se envolver com outros criadores</label><br>
+                    <button onclick="verificarResposta('pergunta3','feedback3')">Verificar</button>
+                    <div id="feedback3" class="feedback"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function mostrarHistoria(secao) {
+            const todasAsHistoria = document.querySelectorAll('.history-content');
+            todasAsHistoria.forEach((historia) => {
+                historia.classList.remove('active');
+            });
+            document.getElementById(secao).classList.add('active');
+        }
+
+        function verificarResposta(pergunta, feedbackId) {
+            const opcoes = document.getElementsByName(pergunta);
+            let resposta = null;
+            for (let i = 0; i < opcoes.length; i++) {
+                if (opcoes[i].checked) {
+                    resposta = opcoes[i].value;
+                }
+            }
+            const feedback = document.getElementById(feedbackId);
+            if (!resposta) {
+                feedback.textContent = "⚠️ Selecione uma opção!";
+                feedback.className = "feedback errado";
+                return;
+            }
+            if (resposta === "certo") {
+                feedback.textContent = "✅ Resposta Correta!";
+                feedback.className = "feedback correto";
+            } else {
+                feedback.textContent = "❌ Resposta Errada!";
+                feedback.className = "feedback errado";
+            }
+        }
+
+        const botaoAcessibilidade = document.getElementById("botao-acessibilidade");
+        const opcoesAcessibilidade = document.getElementById("opcoes-acessibilidade");
+        botaoAcessibilidade.addEventListener("click", () => {
+            opcoesAcessibilidade.classList.toggle("apresenta-lista");
+            botaoAcessibilidade.classList.toggle("ativo");
+        });
+
+        const aumentarFonte = document.getElementById("aumentar-fonte");
+        const diminuirFonte = document.getElementById("diminuir-fonte");
+        aumentarFonte.addEventListener("click", () => {
+            let atual = parseFloat(getComputedStyle(document.body).fontSize);
+            document.body.style.fontSize = (atual + 2) + "px";
+        });
+        diminuirFonte.addEventListener("click", () => {
+            let atual = parseFloat(getComputedStyle(document.body).fontSize);
+            if (atual > 10) {
+                document.body.style.fontSize = (atual - 2) + "px";
+            }
+        });
+    </script>
+</body>
+</html>
